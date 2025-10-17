@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>五子棋（Canvas 高级版）</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>五子棋（Canvas 高级版）</h1>
+
+  <div id="status-panel">
+    <div id="turn-info">当前轮到：黑棋</div>
+    <div id="game-status">游戏进行中...</div>
+  </div>
+
+  <div id="controls">
+    <label><input type="checkbox" id="aiToggle"> 对战电脑</label>
+    <span id="first-move-options">
+      玩家：
+      <label><input type="radio" name="firstMove" value="first" checked> 先手（黑）</label>
+      <label><input type="radio" name="firstMove" value="second"> 后手（白）</label>
+    </span>
+
+    <label>AI 难度：
+      <select id="aiLevel">
+        <option value="easy">简单</option>
+        <option value="normal" selected>普通</option>
+        <option value="hard">困难</option>
+      </select>
+    </label>
+
+    <button id="undoBtn">悔棋</button>
+    <button id="redoBtn">重做</button>
+    <button id="restartBtn">重新开始</button>
+  </div>
+
+  <div id="canvas-wrap">
+    <canvas id="boardCanvas" width="640" height="640"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
